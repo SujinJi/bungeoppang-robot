@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>bungeoppang2</name>
+  <version>0.1.0</version>
+  <description>붕어빵 로봇: 공정 제어 + 음성인식 + 사람 인식</description>
+  <maintainer email="su@todo.todo">su</maintainer>
+  <license>MIT</license>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>visualization_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>dsr_msgs2</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>rh_p12_rn_a_description</exec_depend>
+  <exec_depend>xacro</exec_depend>
+  <!-- 음성/비전은 pip 설치: faster-whisper sounddevice numpy ultralytics opencv-python -->
+
+  <export><build_type>ament_python</build_type></export>
+</package>

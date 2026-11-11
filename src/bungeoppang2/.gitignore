@@ -1,0 +1,11 @@
+# 에디터 캐시 (browse.vc.db 1.3GB 등)
+.vscode/
+
+# 파이썬 캐시
+__pycache__/
+*.pyc
+
+# colcon 빌드 결과 (워크스페이스에서 빌드할 때 혹시 생기면)
+build/
+install/
+log/

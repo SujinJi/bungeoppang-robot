@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!-- E0509 link_6(플랜지)에 RH-P12-RN 그리퍼 모델을 붙이는 표시용 URDF.
+     두산 런치의 로봇 모델은 그대로 두고, 이 파일은 별도 robot_state_publisher로 띄워요.
+     (ROBOTIS 저장소에는 RN-A 모델만 있어서 RN-A 메쉬로 표시해요. 외형만 조금 달라요.) -->
+<robot name="gripper_on_e0509" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:arg name="yaw_deg" default="0.0"/>   <!-- 플랜지에 붙은 회전 각도 -->
+  <xacro:arg name="mount_z" default="0.0"/>   <!-- 브래킷 두께 (m) -->
+
+  <xacro:include filename="$(find rh_p12_rn_a_description)/urdf/rh_p12_rn_a.xacro"/>
+
+  <!-- 두산 로봇의 link_6과 이름이 같아서 TF로 자동 연결돼요 -->
+  <link name="link_6"/>
+
+  <joint name="gripper_mount" type="fixed">
+    <parent link="link_6"/>
+    <child link="rh_p12_rn_base"/>
+    <origin xyz="0 0 $(arg mount_z)" rpy="0 0 ${radians($(arg yaw_deg))}"/>
+  </joint>
+
+  <xacro:rh_p12_rn_a prefix=""/>
+</robot>

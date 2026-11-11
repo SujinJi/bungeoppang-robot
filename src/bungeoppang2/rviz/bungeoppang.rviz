@@ -1,0 +1,70 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+    Property Tree Widget:
+      Expanded: ~
+    Tree Height: 500
+  - Class: rviz_common/Views
+    Name: Views
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Cell Size: 0.5
+      Plane Cell Count: 10
+      Reference Frame: <Fixed Frame>
+    - Class: rviz_default_plugins/RobotModel
+      Name: "로봇 (E0509)"
+      Enabled: true
+      Description Source: Topic
+      Description Topic:
+        Value: /dsr01/robot_description
+        Durability Policy: Transient Local
+        Reliability Policy: Reliable
+      TF Prefix: ""
+      Visual Enabled: true
+      Alpha: 1
+    - Class: rviz_default_plugins/RobotModel
+      Name: "그리퍼 (RH-P12)"
+      Enabled: true
+      Description Source: Topic
+      Description Topic:
+        Value: /gripper/robot_description
+        Durability Policy: Transient Local
+        Reliability Policy: Reliable
+      TF Prefix: ""
+      Visual Enabled: true
+      Alpha: 1
+    - Class: rviz_default_plugins/MarkerArray
+      Name: "작업대·물체"
+      Enabled: true
+      Topic:
+        Value: /bungeoppang/scene
+        Depth: 5
+        Durability Policy: Volatile
+        Reliability Policy: Reliable
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: base_link
+    Frame Rate: 30
+  Tools:
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Name: Current View
+      Distance: 2.2
+      Focal Point:
+        X: 0.1
+        Y: 0.35
+        Z: 0.0
+      Pitch: 0.5
+      Yaw: 0.76
+      Near Clip Distance: 0.01
+Window Geometry:
+  Height: 800
+  Width: 1200
